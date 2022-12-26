@@ -1,0 +1,241 @@
+body, ul ,li ,h1, h2, a{
+    margin: 0;
+    
+    font-family:'Times New Roman', Times, serif;
+}
+header{ 
+    background-color:#F63232;
+    padding:20px;
+    text-align:center;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top:0;
+    left: 0;
+}
+header h1{
+    display: inline-block;
+    color: white;
+    border: 8px solid white;
+    padding: 6px 12px;
+    border-radius: 36px;
+}
+/* banner is the parent for the Welcome section */
+.banner{
+    position: relative;
+}
+.banner img{
+    max-width:100%;
+}
+/* //if we make something absolutely we take it out from the normal document flow and we delete that space */
+.banner .Welcome {
+    position: absolute;
+    color: white;
+    padding:30px;
+    background-color: #feb614;
+    left: 0px;
+    top:30%;
+}
+.banner h2{
+    font-size: 74px;
+}
+.banner h2 span{
+    font-size: 1.3em;
+}
+nav{
+    background-color: #F4F4F4;
+    padding:20px;
+    position: sticky;
+    top:120px;
+
+}
+nav ul{
+    white-space: nowrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+nav li{
+    width:25%;
+    display: inline-block;
+    /* //inline-block particularly sirf uss cheez ko cover krne me kaam ayega */
+
+}
+nav li a{
+    text-decoration: none;
+    color: #4b4b4b;
+}
+nav li .kd{
+    color: #F63232;
+}
+
+main{
+    max-width: 100%;
+    width: 1200px;
+    /* //auto keyword is used to make it to the center */
+    margin: 80px auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+main article h2{
+    color:#F63232;
+    font-size: 48px;
+}
+article p{
+    line-height: 2em;
+    color:#4b4b4b;
+}
+.mario{
+    text-align: center;
+    margin: 80px 0;
+    white-space: nowrap;
+}
+.mario li{
+    display:  inline-block;
+    width: 40%;
+    margin: 20px 50px;
+}
+.mario li img{
+    max-width: 100% ;
+    height: auto;
+
+}
+.join {
+    background:#F4F4F4;
+    text-align: center;
+    padding: 50px 20px;
+    color:#4b4b4b;
+}
+.join h2{
+    font-size: 56px;
+}
+form input{
+    margin: 20px 0;
+    padding: 10px 20px;
+    font-size: 25px;
+    border-radius: 50px;
+    border: white;
+    /* border: 4px  ; */
+}
+
+footer{
+    background-color: red;
+    color: white;
+    padding:10px 0 ;
+    text-align: center;
+
+}
+/* psuedo classes */
+nav li a:hover{
+    text-decoration:underline ;
+    /* background-color: pink; */
+    /* padding:3px; */
+
+}
+/* //if we want to make something or move something then you should use position relative so it will move relative to its original position */
+main li:hover{
+    position: relative;
+    top: -20px;
+}
+
+form input:focus{
+    border: 4px dotted;
+    outline: none;
+}
+form input:valid{
+    border: 4px solid green;
+}
+/* //Decorating the first child */
+/* nav li:first-child{
+    border: 3px solid #F63232;
+} */
+article p::first-line{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+section.join p::first-letter{
+    font-size: 1.5em;
+}
+p::selection{
+    background-color: grey;
+    color:white;
+}
+p::after{
+    content: '...';
+}
+@media screen and (max-width: 1400px){
+    /* //you have to add only that method that you want to change you dont have to write the override methods */
+    .banner .Welcome {
+      font-size: 60px;
+    }
+    header{ 
+       font-size: 20px;
+    }
+    header h1{
+       font-size: 20px;
+    }
+    main{
+       font-size: 20px;
+    }
+    footer{
+        font-size: 20px;
+    
+    }
+   
+    /* nav{
+        font-size: 20px;
+    
+    } */
+    .join h2{
+        font-size: 20px;
+    }
+    .join p{
+        font-size: 20px;
+    }
+    .mario li img{
+        
+    
+    }
+    
+}
+@media screen and (max-width:960px){
+    .banner .Welcome h2{
+        font-size: 40px;
+      }
+}
+@media screen and (max-width:700px){
+    .banner .Welcome {
+        position:relative;
+        text-align: center;
+        padding: 10px;
+      }
+    .banner .Welcome br{
+        display: none;
+        font-size: 25px;
+      }
+      .banner .Welcome span{
+        font-size: 1em;
+      }
+      .mario li{
+        width:100%;
+        margin: 20px auto;
+        display: block;
+      }
+      nav{
+        top: 0;
+      }
+}
+@media screen and (max-width:560px){
+    nav li {
+        font-size: 20px;
+        position: relative;
+        display: block;
+        margin: 10px 0;
+
+    }
+    header{
+        position: relative;
+    }
+    nav{
+        top: 0;
+    }
+}
